@@ -1,4 +1,49 @@
 @extends('frontend.layouts.app')
+@section('title')
+    Myfoundation
+@endsection
+@push('css')
+    <style>
+        .mrq .news, marquee{
+            display: inline-block;
+            background: rgb(255, 255, 255);
+            /* width: fit-content; */
+            padding: 10px
+        }.mrq .news{
+            background: #000;
+            color: #ffdf;
+            /* width: 5%; */
+            padding: ;
+            min-width: 5%;
+        }
+        marquee{
+            width: 90%;
+        }
+        .mrq{
+            margin-top:1rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            padding: 0;
+            margin-left: 5%;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            vertical-align: middle;
+            /* display: inline; */
+            border: 2px solid black
+        }
+        .cal{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5vh;
+        }
+        .sm h3, .lg h3{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+@endpush
 @section('content')
     
     <!-- slider_area_start -->
@@ -22,7 +67,34 @@
         </div>
     </div>
     <!-- slider_area_end -->
+    <section class="d-flex flex-column p-5">
+        <div class="mrq">
+            <div class="news">News</div>
+            <marquee direction="left">
+                A Guide on adding Hyderi Events to your Calendar &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  Imam Reza (AS) Hardship Fund
+            </marquee>
+        </div>
+        <div class="cal d-flex flex-wrap">
+            <div class="sm col-md-3 d-flex flex-column pt-2 pb-2 text-center">
+                <h3 style="font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UPCOMING EVENTS</h3 >
+                <div  style="height: 200px; background: #C09400">
 
+                </div>
+            </div>
+            <div class="lg col-md-5 pt-2 pb-2 text-center">
+                <h3 style="font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">ISLAMIC CALENDAR</h3 >
+                    <div style="height: 200px; background: #C09400">
+
+                    </div>
+            </div>
+            <div class="sm col-md-3 pt-2 pb-2 text-center">
+               <h3 style="font-size: xx-large    ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">SALAAT TIMINGS</h3 > 
+                <div style="height: 200px; background: #C09400">
+
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- reson_area_start  -->
     <div class="reson_area section_padding">
         <div class="container">
@@ -38,7 +110,7 @@
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
-                                <img src="img/help/1.png" alt="">
+                                <img src={{asset('frontend/img/help/1.png')}} alt="">
                             </div>
                         </div>
                         <div class="help_content">
@@ -54,7 +126,7 @@
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
-                                <img src="img/help/2.png" alt="">
+                                <img src={{asset('frontend/img/help/2.png')}} alt="">
                             </div>
                         </div>
                         <div class="help_content">
@@ -70,7 +142,7 @@
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
-                                <img src="img/help/3.png" alt="">
+                                <img src={{asset('frontend/img/help/3.png')}} alt="">
                             </div>
                         </div>
                         <div class="help_content">
@@ -86,7 +158,6 @@
         </div>
     </div>
     <!-- reson_area_end  -->
-
     <!-- latest_activites_area_start  -->
     <div class="latest_activites_area">
         <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
@@ -133,7 +204,7 @@
                     <div class="causes_active owl-carousel">
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src={{asset('frontend/img/causes/1.png')}} alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -158,7 +229,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/2.png" alt="">
+                                <img src={{asset('frontend/img/causes/2.png')}} alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -183,7 +254,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/3.png" alt="">
+                                <img src={{asset('frontend/img/causes/3.png')}} 
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -208,7 +279,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src={{asset('frontend/img/causes/1.png')}}  alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -307,7 +378,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/1.png" alt="">
+                            <img src={{asset('frontend/img/volenteer/1.png')}}  alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -336,7 +407,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/2.png" alt="">
+                            <img src={{asset('frontend/img/volenteer/2.png')}}  alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -365,7 +436,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/3.png" alt="">
+                            <img src={{asset('frontend/img/volenteer/3.png')}}  alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -411,7 +482,7 @@
                     <div class="news_active owl-carousel">
                         <div class="single__blog d-flex align-items-center">
                             <div class="thum">
-                                <img src="img/news/1.png" alt="">
+                                <img src={{asset('frontend/img/news/1.png')}}  alt="">
                             </div>
                             <div class="newsinfo">
                                 <span>July 18, 2019</span>
@@ -428,7 +499,7 @@
                         </div>
                         <div class="single__blog d-flex align-items-center">
                             <div class="thum">
-                                <img src="img/news/2.png" alt="">
+                                <img src={{asset('frontend/img/news/2.png')}}  alt="">
                             </div>
                             <div class="newsinfo">
                                 <span>July 18, 2019</span>
@@ -511,3 +582,8 @@
         </div>
     </div>
 @endsection
+@push('js')
+    <script>
+
+    </script>
+@endpush

@@ -46,7 +46,7 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">home</a></li>
-                                    <li><a href="About.html">About</a></li>
+                                    <li><a href="{{route('wali')}}">About</a></li>
                                     <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">blog</a></li>

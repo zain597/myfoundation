@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.index');
 })->name('index');
+
+
+Route::get('/wali_abbas', function () {
+    return view('frontend.wali');
+})->name('wali');
