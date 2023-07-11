@@ -272,7 +272,7 @@ h3 {
 .overlay2::before {
   position: absolute;
   content: "";
-  background-color: #3CC78F;
+  background-color: #C09400;
   top: 0;
   left: 0;
   width: 100%;
@@ -469,13 +469,13 @@ h3 {
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn {
   background: #fff;
-  color: #3CC78F !important;
+  color: #C09400 !important;
   display: inline-block;
   padding: 15px 30px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  border: 1px solid #3CC78F;
+  border: 1px solid #C09400;
   text-transform: capitalize;
   cursor: pointer;
   -webkit-border-radius: 3px;
@@ -492,9 +492,9 @@ h3 {
 
 /* line 16, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #3CC78F;
+  background: #C09400;
   color: #fff !important;
-  border: 1px solid #3CC78F;
+  border: 1px solid #C09400;
 }
 
 /* line 21, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
@@ -526,7 +526,7 @@ h3 {
 
 /* line 41, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
-  background: #3CC78F;
+  background: #C09400;
   color: #fff;
 }
 
@@ -557,7 +557,7 @@ h3 {
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  background: #3CC78F;
+  background: #C09400;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
   border: 1px solid transparent;
@@ -566,8 +566,8 @@ h3 {
 /* line 67, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn4:hover {
   background: #fff;
-  color: #3CC78F;
-  border: 1px solid #3CC78F;
+  color: #C09400;
+  border: 1px solid #C09400;
 }
 
 /* line 72, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
@@ -830,12 +830,12 @@ h3 {
 
 /* line 260, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .read_more:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 262, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .read_more:hover::before {
-  background: #3CC78F;
+  background: #C09400;
 }
 
 /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
@@ -860,7 +860,7 @@ h3 {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #3CC78F;
+  background: #C09400;
   height: 10px;
   width: 100%;
   content: '';
@@ -1102,7 +1102,7 @@ h3 {
 
 /* line 16, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area {
-  background: #3CC78F;
+  background: #C09400;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1220,7 +1220,7 @@ h3 {
 /* line 101, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a:hover {
   background: #fff;
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 108, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -1390,7 +1390,7 @@ h3 {
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-  background: #3CC78F;
+  background: #C09400;
   bottom: auto;
 }
 
@@ -1441,7 +1441,7 @@ h3 {
 
 /* line 244, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .header-top_area .social_media_links a:hover {
-  color: #3CC78F;
+  color: #C09400  ;
 }
 
 /* line 249, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -2209,7 +2209,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('wave.png');
+  background: url('https://o.remove.bg/downloads/96a00d19-eeff-4875-bb4f-ef614a18b567/Untitled-removebg-preview.png');
   background-size: 1000px 100px;
 }
 footer .wave#wave1{
@@ -2395,7 +2395,7 @@ footer .wave#wave4{
 
 /* line 103, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p a:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 109, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
@@ -2415,8 +2415,8 @@ footer .wave#wave4{
 
 /* line 118, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text a.domain:hover {
-  color: #3CC78F;
-  border-bottom: 1px solid #3CC78F;
+  color: #C09400;
+  border-bottom: 1px solid #C09400;
 }
 
 /* line 124, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
@@ -2427,8 +2427,8 @@ footer .wave#wave4{
 
 /* line 128, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text.doanar a:hover {
-  color: #3CC78F;
-  border-bottom: 1px solid #3CC78F;
+  color: #C09400;
+  border-bottom: 1px solid #C09400;
 }
 
 /* line 132, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
@@ -2452,7 +2452,7 @@ footer .wave#wave4{
 
 /* line 148, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 154, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
@@ -2496,7 +2496,7 @@ footer .wave#wave4{
   border: none;
   font-size: 14px;
   color: #fff;
-  background: #3CC78F;
+  background: #C09400;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
@@ -2552,7 +2552,7 @@ footer .wave#wave4{
 
 /* line 226, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 231, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
@@ -2588,7 +2588,7 @@ footer .wave#wave4{
 
 /* line 255, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .socail_links ul li a:hover {
-  color: #3CC78F !important;
+  color: #C09400 !important;
   border-color: transparent;
 }
 
@@ -2626,7 +2626,7 @@ footer .wave#wave4{
 
 /* line 15, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .bradcam_area.overlay::before {
-  background: #3CC78F;
+  background: #C09400;
   opacity: .8;
 }
 
@@ -3011,12 +3011,12 @@ footer .wave#wave4{
 
 /* line 60, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
 .reson_area .single_reson .help_content .read_more:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 62, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
 .reson_area .single_reson .help_content .read_more:hover::before {
-  background: #3CC78F;
+  background: #C09400;
 }
 
 /* line 70, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
@@ -3072,7 +3072,7 @@ footer .wave#wave4{
   z-index: 12;
   width: 150px;
   height: 150px;
-  background: #3CC78F;
+  background: #C09400;
   text-align: center;
   line-height: 150px;
   -webkit-border-radius: 50%;
@@ -3087,7 +3087,7 @@ footer .wave#wave4{
   top: 0;
   height: 100%;
   width: 100%;
-  background: #3CC78F;
+  background: #C09400;
   opacity: .3;
   content: '';
 }
@@ -3164,7 +3164,7 @@ footer .wave#wave4{
 
 /* line 29, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_causes.scss */
 .popular_causes_area.cause_details .single_cause .causes_content .custom_progress_bar .progress .progress-bar {
-  background-color: #3CC78F;
+  background-color: #C09400;
   position: relative;
 }
 
@@ -3178,7 +3178,7 @@ footer .wave#wave4{
   -moz-border-radius: 50%;
   border-radius: 50%;
   font-size: 35px;
-  background: #3CC78F;
+  background: #C09400;
   line-height: 100px;
 }
 
@@ -3301,7 +3301,7 @@ footer .wave#wave4{
 
 /* line 120, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_causes.scss */
 .popular_causes_area .single_cause .causes_content .custom_progress_bar .progress .progress-bar {
-  background-color: #3CC78F;
+  background-color: #C09400;
   position: relative;
 }
 
@@ -3315,7 +3315,7 @@ footer .wave#wave4{
   -moz-border-radius: 50%;
   border-radius: 50%;
   font-size: 12px;
-  background: #3CC78F;
+  background: #C09400;
   line-height: 32px;
 }
 
@@ -3376,7 +3376,7 @@ footer .wave#wave4{
 
 /* line 15, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_counter.scss */
 .counter_area .overlay:before {
-  background: #3CC78F;
+  background: #C09400;
   opacity: .6;
 }
 
@@ -3614,7 +3614,7 @@ footer .wave#wave4{
   content: '';
   width: 8px;
   height: 8px;
-  background: #3CC78F;
+  background: #C09400;
   position: absolute;
   top: 4px;
   left: 2px;
@@ -3639,7 +3639,7 @@ footer .wave#wave4{
 /* line 58, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
 .make_donation_area .donation_form .input_field .input-group {
   width: 100%;
-  border: 1px solid #3CC78F;
+  border: 1px solid #C09400;
   border-radius: 7px;
   padding: 5px 10px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -3691,7 +3691,7 @@ footer .wave#wave4{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 18px 27px;
   border-radius: 7px;
-  border: 1px solid #3CC78F;
+  border: 1px solid #C09400;
   display: block;
   overflow: hidden;
 }
@@ -5229,7 +5229,7 @@ h6 {
 
 /* line 14, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #3CC78F 0%, #3CC78F 99%);
+  background: -webkit-linear-gradient(131deg, #C09400 0%, #C09400 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -5740,7 +5740,7 @@ h6 {
 
 /* line 544, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .blog_details a:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 549, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
@@ -5808,7 +5808,7 @@ h6 {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #3CC78F;
+  background-color: #C09400;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -6036,7 +6036,7 @@ h6 {
 
 /* line 842, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #3CC78F;
+  background: #C09400;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -6284,7 +6284,7 @@ h6 {
 
 /* line 1208, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: #3CC78F;
+  color: #C09400;
 }
 
 /* line 1213, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
@@ -6713,7 +6713,7 @@ h6 {
 
 /* line 72, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a {
-  color: #3CC78F;
+  color: #C09400;
   text-transform: uppercase;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -6740,7 +6740,7 @@ h6 {
   height: 10px;
   top: 5px;
   left: 0;
-  background-color: #3CC78F;
+  background-color: #C09400;
   border-radius: 50%;
 }
 
