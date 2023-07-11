@@ -1492,7 +1492,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../img/cover1.jpg);
 }
 
 /* line 4, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
@@ -1536,7 +1536,7 @@ h3 {
 .slider_area .single_slider .slider_text h3 {
   color: #fff;
   font-family: "Yeseva One", cursive;
-  font-size: 84px;
+  font-size: 60px;
   margin-top: 6px;
   margin-bottom: 9px;
   line-height: 1.14;
@@ -2209,7 +2209,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('https://o.remove.bg/downloads/96a00d19-eeff-4875-bb4f-ef614a18b567/Untitled-removebg-preview.png');
+  background: url('https://cdn.discordapp.com/attachments/1116327198274621552/1128308435696504924/Untitled-removebg-preview.png');
   background-size: 1000px 100px;
 }
 footer .wave#wave1{

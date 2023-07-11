@@ -8,7 +8,7 @@
                         <div class="short_contact_list">
                             <ul>
                                 <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
-                                <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                <li><a href="#"> <i class="fa fa-envelope"></i>chair@myfoundation.org.uk</a></li>
                             </ul>
                         </div>
                     </div>

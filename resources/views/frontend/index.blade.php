@@ -53,9 +53,8 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="slider_text ">
-                            <span>Get Started Today.</span>
-                            <h3> Help the children
-                                When They Need</h3>
+                            <span>Myfoundation</span>
+                            <h3> PLEASE DONATE AND SUPPORT MUHARRAM 2023</h3>
                             <p>With so much to consume and such little time, coming up <br>
                                 with relevant title ideas is essential</p>
                             <a href="About.html" class="boxed-btn3">Learn More
@@ -95,70 +94,6 @@
             </div>
         </div>
     </section>
-    <!-- reson_area_start  -->
-    <div class="reson_area section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb-55">
-                        <h3><span>Reason of Helping</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src={{asset('frontend/img/help/1.png')}} alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Collecting Fund</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src={{asset('frontend/img/help/2.png')}} alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Blood Camp</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src={{asset('frontend/img/help/3.png')}} alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Friendly Volunteer</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- reson_area_end  -->
-    <!-- latest_activites_area_start  -->
     <div class="latest_activites_area">
         <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
             <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">
@@ -204,27 +139,13 @@
                     <div class="causes_active owl-carousel">
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src={{asset('frontend/img/causes/1.png')}} alt="">
+                                <img src={{asset('frontend/img/card-img.jpg')}} alt="">
                             </div>
                             <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Help us to Send Food</h4>
+                                <h4>Jumuah (Friday) Prayers</h4>
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
                                     who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
                             </div>
                         </div>
                         <div class="single_cause">
@@ -232,49 +153,23 @@
                                 <img src={{asset('frontend/img/causes/2.png')}} alt="">
                             </div>
                             <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Clothes For Everyone</h4>
+                                <h4>Islamic Madressah (School)</h4>
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                    who is thought
+                                </p>
                             </div>
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src={{asset('frontend/img/causes/3.png')}} 
+                                <img src={{asset('frontend/img/causes/3.png')}} >
                             </div>
                             <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Water For All Children</h4>
+                                <h4>Regular Islamic Programming</h4>
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                    who is thought
+                                </p>
                             </div>
                         </div>
                         <div class="single_cause">
@@ -282,24 +177,36 @@
                                 <img src={{asset('frontend/img/causes/1.png')}}  alt="">
                             </div>
                             <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Help us to Send Food</h4>
+                                <h4>Youth Programs</h4>
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                    who is thought
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src={{asset('frontend/img/causes/3.png')}} >
+                            </div>
+                            <div class="causes_content">
+                                <h4>Funeral Services</h4>
+                                <p>The passage is attributed to an 
+                                    unknown typesetter in the century 
+                                    who is thought
+                                </p>
+                            </div>
+                        </div>
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src={{asset('frontend/img/causes/3.png')}} >
+                            </div>
+                            <div class="causes_content">
+                                <h4>Sports & Recreation</h4>
+                                <p>The passage is attributed to an 
+                                    unknown typesetter in the century 
+                                    who is thought
+                                </p>
                             </div>
                         </div>
                     </div>
