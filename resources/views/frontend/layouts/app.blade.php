@@ -38,6 +38,7 @@
 
     <!-- link that opens popup -->
     <!-- JS here -->
+    @stack('js')
     <script src={{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}></script>
     <script src={{asset('frontend/js/vendor/modernizr-3.5.0.min.js')}}></script>
     <script src={{asset('frontend/js/popper.min.js')}}></script>
@@ -64,7 +65,7 @@
     <script src={{asset('frontend/js/mail-script.js')}}></script>
 
     <script src={{asset('frontend/js/main.js')}}></script>
-    @stack('js')
+    
 
 </body>
 

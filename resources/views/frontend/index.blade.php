@@ -3,6 +3,8 @@
     Myfoundation
 @endsection
 @push('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+
     <style>
         .mrq .news, marquee{
             display: inline-block;
@@ -82,7 +84,8 @@
             </div>
             <div class="lg col-md-5 pt-2 pb-2 text-center">
                 <h3 style="font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">ISLAMIC CALENDAR</h3 >
-                    <div style="height: 200px; background: #C09400">
+                    <div id="calendar">
+
 
                     </div>
             </div>
@@ -490,7 +493,13 @@
     </div>
 @endsection
 @push('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script>
-
+        $(document).ready(function(){
+            
+        })
     </script>
 @endpush
