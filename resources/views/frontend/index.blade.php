@@ -47,7 +47,31 @@
     </style>
 @endpush
 @section('content')
-    
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
@@ -67,6 +91,7 @@
             </div>
         </div>
     </div>
+    
     <!-- slider_area_end -->
     <section class="d-flex flex-column p-5">
         <div class="mrq">
@@ -97,6 +122,7 @@
             </div>
         </div>
     </section>
+    
     <div class="latest_activites_area">
         <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
             <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">
@@ -497,9 +523,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            
+            var booking = @json($events);
+            $('#calendar').fullCalendar({
+                header:{
+                    left : 'prev, next today',
+                    center : 'title',
+                    right : 'month, agendaWeek, agendaDay'
+                },
+                events: booking,
+                selectable: true,
+                selectHelper: true,
+                select: function(start, end, allDays){
+                    $('#exampleModal').modal('toggle');
+                }
+            });
+            // $('#closeModal').click(function(){
+            //     alert('yes')
+            // });
         })
     </script>
 @endpush
