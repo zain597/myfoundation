@@ -59,7 +59,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" onclick="closeModal(e)" id="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           ...
@@ -540,9 +540,18 @@
                     $('#exampleModal').modal('toggle');
                 }
             });
+
+            function closeModal(e) {
+              var es =  e.style.color = "red"
+            }
             // $('#closeModal').click(function(){
             //     alert('yes')
             // });
         })
+
+       
+
+        
+
     </script>
 @endpush
