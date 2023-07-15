@@ -19,3 +19,6 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/',[IndexController::class,'index'])->name('index');
+Route::post('/calendar/event/store',[IndexController::class,'storeEvent'])->name('calendar.event.store');
+Route::patch('/calendar/event/update/{id}',[IndexController::class,'updateEvent'])->name('calendar.event.update');
+Route::delete('/calendar/event/delete/{id}',[IndexController::class,'deleteEvent'])->name('calendar.event.delete');

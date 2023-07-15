@@ -40,33 +40,74 @@
             justify-content: space-between;
             padding-top: 5vh;
         }
-        .sm h3, .lg h3{
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
+        .fc-time{
+            visibility: hidden;
+        }
+        .modal{
+            backdrop-filter: blur(3px) !important;
+        }
+        .custom-modal{
+            background-color: #ccb56b !important;
+        }
+        .upcoming_event{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .upcoming_event .event_day h3, .upcoming_event .event_name h3{
+            font-size: 16px;
+            color: gray;
+        }
+        .upcoming_event .event_day h1{
+            font-size: 30px;
+        }
+        .upcoming_event .event_name h1{
+            font-size: 25px;
+        }
+        @media (max-width: 768px) {
+            #calendar {
+                width: 100%;
+                height: auto;
+            }
+            .fc-toolbar.fc-header-toolbar 
+            {
+                font-size: 60%
+            }
         }
     </style>
 @endpush
 @section('content')
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
+
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content custom-modal">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" onclick="closeModal(e)" id="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel">Create Event</h5>
+            <button type="button" id="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" style="padding:1px;font-weight:bold;font-size:20px">&times;</span>
+            </button>
+            
         </div>
         <div class="modal-body">
-          ...
+            <label for="title" class="text-dark">Title:</label>
+            <input type="text" class="form-control" id="title" >
+            <label for="desc" class="text-dark">Description:</label>
+            <input type="textarea" class="form-control" id="desc" >
+            <span id="titleError" class="text-danger"></span>
+            <div class="mt-2">
+                <label for="start_range" class="text-dark" >Start Time:</label>
+                <input type="time" id="start_range" name="start_range">
+                <label for="end_range" class="text-dark">End Time:</label>
+                <input type="time" id="end_range" name="end_range">
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="saveBtn" class="btn btn-warning">Save changes</button>
         </div>
       </div>
     </div>
@@ -101,23 +142,59 @@
             </marquee>
         </div>
         <div class="cal d-flex flex-wrap">
-            <div class="sm col-md-3 d-flex flex-column pt-2 pb-2 text-center">
-                <h3 style="font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">UPCOMING EVENTS</h3 >
-                <div  style="height: 200px; background: #C09400">
+            <div class="sm col-md-3 d-flex flex-column pt-2 pb-2 text-center ">
+                <h3 style="padding: 10px 2px;font-size: xx-large; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">UPCOMING EVENTS</h3 >
+                    @foreach ($timings as $time)
+                        @inject('carbon', 'Carbon\Carbon')
+                        <div class="upcoming_event">
+                            <div class="event_day">
+                                <h3 id="eventMonth">{{ $carbon::parse($time->start_date)->format('M') }}</h3>
+                                <h1 id="eventDay">{{ $carbon::parse($time->start_date)->format('d') }}</h1>
+                            </div>
+                            <div class="event_name">
+                                <h3 id="eventRange">{{ $carbon::parse($time->start_range)->format('g:i A') }} - {{ $carbon::parse($time->end_range)->format('g:i A') }}</h3>
+                                <h1 id="eventTitle">{{$time->title}}</h1>
+                            </div>
+                        </div>
+                    @endforeach
+                    <h5 style="color: #C09400;text-align:left;cursor:pointer">View Calendar</h5>
 
-                </div>
             </div>
             <div class="lg col-md-5 pt-2 pb-2 text-center">
-                <h3 style="font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">ISLAMIC CALENDAR</h3 >
+                <h3 style="padding: 10px 2px;font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">ISLAMIC CALENDAR</h3 >
                     <div id="calendar">
 
 
                     </div>
             </div>
             <div class="sm col-md-3 pt-2 pb-2 text-center">
-               <h3 style="font-size: xx-large    ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">SALAAT TIMINGS</h3 > 
-                <div style="height: 200px; background: #C09400">
-
+               <h3 style="padding: 10px 2px;font-size: xx-large    ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">SALAAT TIMINGS</h3 > 
+                <div>
+                    <h3 id="todayDay"></h3>
+                    <table width="100%" class="table table-bordered table-lg">
+                        <tbody>
+                            <tr >
+                                <td>Fajr</td>
+                                <td id="fajr"></td>
+                            </tr>
+                            <tr>
+                                <td>Dhuhr</td>
+                                <td id="dhuhr"></td>
+                            </tr>
+                            <tr>
+                                <td>Asr</td>
+                                <td id="asr"></td>
+                            </tr>
+                            <tr>
+                                <td>Maghrib</td>
+                                <td id="maghrib"></td>
+                            </tr>
+                            <tr>
+                                <td>Isha</td>
+                                <td id="isha"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -524,32 +601,188 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         $(document).ready(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            
             var booking = @json($events);
+
             $('#calendar').fullCalendar({
                 header:{
                     left : 'prev, next today',
                     center : 'title',
                     right : 'month, agendaWeek, agendaDay'
                 },
+                
                 events: booking,
                 selectable: true,
                 selectHelper: true,
+                defaultView: 'month',
+                aspectRatio: 1.35,
+                scrollTime: '08:00:00', // Adjust this value to set the initial scroll position
+                scrollable: true,
                 select: function(start, end, allDays){
-                    $('#exampleModal').modal('toggle');
+                    $('#bookingModal').modal('toggle');
+
+                    $('#saveBtn').click(function() { 
+                        var title = $('#title').val();
+                        var start_date = moment(start).format('YYYY-MM-DD');
+                        var end_date = moment(end).format('YYYY-MM-DD');
+                        var start_range = $('#start_range').val();
+                        var end_range = $('#end_range').val();
+                        var desc = $('#desc').val();
+
+
+                        $.ajax({
+                            url: "{{route('calendar.event.store')}}",
+                            type: "POST",
+                            dataType: 'json',
+                            data: { title, start_date, end_date, start_range, end_range, desc},
+                            success:function(response)
+                            {
+                                $('#bookingModal').modal('hide')
+                                $('#calendar').fullCalendar('renderEvent', {
+                                    'title': response.title,
+                                    'start' : response.start,
+                                    'end'  : response.end,
+                                    'color' : response.color
+                                });
+
+                            },
+                            error:function(error)
+                            {
+                                if(error.responseJSON.errors) {
+                                    $('#titleError').html(error.responseJSON.errors.title);
+                                }
+                            },
+                        });
+                        
+                    });
+                },
+                editable:true,
+                eventDrop: function(event){
+                    var id = event.id;
+                    var start_date = moment(event.start).format('YYYY-MM-DD');
+                    var end_date = moment(event.end).format('YYYY-MM-DD');
+                    $.ajax({
+                        url: "{{route('calendar.event.update', '')}}"+'/'+ id,
+                        type: "PATCH",
+                        dataType: 'json',
+                        data: {start_date, end_date },
+                        success:function(response)
+                        {
+                            swal('Good job','Event Updated!','success')
+
+                        },
+                        error:function(error)
+                        {
+                            console.log(error);
+                        },
+                    });
+                },
+                //for event delete
+                eventClick: function(event){
+                    var id = event.id;
+
+                    if(confirm('Are you sure, you want to delete the event')){
+                       
+                        $.ajax({
+                            url: "{{route('calendar.event.delete', '')}}"+'/'+ id,
+                            type: "DELETE",
+                            dataType: 'json',
+                            success:function(response)
+                            {
+                                $('#calendar').fullCalendar('removeEvents', response)
+                                swal('Good job','Event Deleted!','success')
+
+                            },
+                            error:function(error)
+                            {
+                                console.log(error);
+                            },
+                        });
+                    }
+                    
+                },
+                //disabling multiple event system
+                selectAllow: function(event){
+                    return moment(event.start).utcOffset(false).isSame(moment(event.end).subtract(1, 'second').utcOffset(false), 'day');
+                },
+            });
+            $("#bookingModal").on("hidden.bs.modal", function(){
+                $('#saveBtn').unbind();
+            });
+            $('.fc-event').css('font-size','13px');
+            $('.fc-event').css('border-radius','10%');
+            $('.fc-event').css('border','1px solid goldenrod');
+            // $('.fc').css('background-color','#f5f5f5');
+
+            var apiEndpoint = 'https://api.aladhan.com/v1/timingsByCity';
+            // var cityName = 'Lahore';
+            // var countryName = 'Pakistan';
+
+            var cityName = 'London';
+            var countryName = 'United Kingdom';
+
+            $.ajax({
+                url: apiEndpoint,
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                city: cityName,
+                country: countryName,
+                method: 2 // Method 2 represents the Islamic Society of North America (ISNA) method for calculation
+                },
+                success: function(response) {
+                    var timings = response.data.timings;
+
+                    // Access individual Salah timings
+                    var fajrTime = timings.Fajr;
+                    var dhuhrTime = timings.Dhuhr;
+                    var asrTime = timings.Asr;
+                    var maghribTime = timings.Maghrib;
+                    var ishaTime = timings.Isha;
+
+                    // Display Salah timings
+                    $('#fajr').text(fajrTime); 
+                    $('#dhuhr').text(dhuhrTime); 
+                    $('#asr').text(asrTime); 
+                    $('#maghrib').text(maghribTime); 
+                    $('#isha').text(ishaTime); 
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
                 }
             });
+                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const months = [
+                    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+                    'August', 'September', 'October', 'November', 'December'
+                ];
 
-            function closeModal(e) {
-              var es =  e.style.color = "red"
-            }
-            // $('#closeModal').click(function(){
-            //     alert('yes')
-            // });
-        })
+                const today = new Date();
+                const dayOfWeek = today.getDay();
+                const currentMonth = today.getMonth() + 1; // Adding 1 since getMonth() returns zero-based month (0-11)
+                const currentDay = today.getDate();
+                const currentMonthIndex = today.getMonth();
+                const currentMonthName = months[currentMonthIndex];
+                var todayDay = daysOfWeek[dayOfWeek]+' '+currentMonthName+' '+currentDay;
+                $('#todayDay').text(todayDay); 
 
-       
+
+        });
+            
+            
+
+
+
+
+
 
         
 

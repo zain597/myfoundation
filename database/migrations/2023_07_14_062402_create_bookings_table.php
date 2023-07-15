@@ -16,8 +16,11 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->text('desc')->nullable();            
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->time('start_range')->nullable();
+            $table->time('end_range')->nullable();
             $table->timestamps();
         });
     }
