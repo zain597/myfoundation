@@ -623,7 +623,7 @@
                 selectable: true,
                 selectHelper: true,
                 defaultView: 'month',
-                // aspectRatio: 1.35,
+                aspectRatio: 1.35,
                 scrollTime: '08:00:00', // Adjust this value to set the initial scroll position
                 scrollable: true,
                 select: function(start, end, allDays){
