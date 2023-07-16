@@ -1083,7 +1083,7 @@ h3 {
   width: 100%;
   top: 0;
   z-index: 9;
-  padding: 0 100px 50px 100px;
+  padding:10px;
 }
 
 @media (max-width: 767px) {
@@ -6921,4 +6921,22 @@ h6 {
 .event-detail .event-detail-about{
   display: flex;
   margin-top: 15px;
+}
+
+
+
+
+.w-header{
+  width: 100%;
+  /* height: 100px ; */
+  background-color: #C09400;
+}
+.navbar {
+  background-color: #C09400 !important;
+  
+}
+.this{
+  display: flex !important;
+  justify-content: space-between;
+  /* align-items: center; */
 }
