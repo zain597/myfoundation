@@ -104,6 +104,9 @@
                 <label for="end_range" class="text-dark">End Time:</label>
                 <input type="time" id="end_range" name="end_range">
             </div>
+            <input type="text" id="location-input" name="location" placeholder="Enter location">
+            <div id="map"></div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
@@ -609,8 +612,8 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            
             var booking = @json($events);
+
 
             $('#calendar').fullCalendar({
                 header:{
@@ -759,22 +762,22 @@
                     console.log(error);
                 }
             });
-                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                const months = [
-                    'January', 'February', 'March', 'April', 'May', 'June', 'July',
-                    'August', 'September', 'October', 'November', 'December'
-                ];
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = [
+                'January', 'February', 'March', 'April', 'May', 'June', 'July',
+                'August', 'September', 'October', 'November', 'December'
+            ];
 
-                const today = new Date();
-                const dayOfWeek = today.getDay();
-                const currentMonth = today.getMonth() + 1; // Adding 1 since getMonth() returns zero-based month (0-11)
-                const currentDay = today.getDate();
-                const currentMonthIndex = today.getMonth();
-                const currentMonthName = months[currentMonthIndex];
-                var todayDay = daysOfWeek[dayOfWeek]+' '+currentMonthName+' '+currentDay;
-                $('#todayDay').text(todayDay); 
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const currentMonth = today.getMonth() + 1; // Adding 1 since getMonth() returns zero-based month (0-11)
+            const currentDay = today.getDate();
+            const currentMonthIndex = today.getMonth();
+            const currentMonthName = months[currentMonthIndex];
+            var todayDay = daysOfWeek[dayOfWeek]+' '+currentMonthName+' '+currentDay;
+            $('#todayDay').text(todayDay); 
 
-
+           
         });
             
             

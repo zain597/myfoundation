@@ -35,6 +35,14 @@
                     </div>
                     <div class="col-md-3">
                         <h3>VENUE</h3>
+                        <h3>Hyderi Islamic Centre</h3>
+                        <p>
+                            6 Pioneer Place
+                            Croydon, CR0 9AW United Kingdom
+                        </p>
+                        <h4>Email:</h4>
+                        <h5>secretariat@hyderi.org.uk</h5>
+
                     </div>
                     <div class="col-md-3"></div>
                 </div>

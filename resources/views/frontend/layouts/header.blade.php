@@ -1,49 +1,50 @@
-<!-- header-start -->
-<header>
-    <div class="header-area ">
-        <div class="header-top_area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-6 col-md-12 col-lg-8">
-                        <div class="short_contact_list">
-                            <ul>
-                                <img src="{{asset('frontend/img/footer_logo.png')}}" style="width: 15%" alt="">
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-6 col-lg-4">
-                        <div class="social_media_links d-none d-lg-block">
-                            <li><a href="" class="btn btn-lg px-4 py-2 btn-warning"><i class="fa fa-heart" style="color: #ffffff;"></i> &nbsp; Donate</a></li>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<header class="header-top">
+
+  <div class="header-sec-1">
+    <a href="{{route('index')}}"><img src="{{asset('frontend/img/footer_logo.png')}}" class="header-img" alt=""></a>
+    <div class="btns" >
+      <button class="btn btn-lg"><a href="" class="header-live "> <i class="fa fa-youtube mr-1"></i>Live</a></button>
+      <button class="btn btn-lg"><a href="" class="header-donate "> <i class="fa fa-heart mr-1"></i>DONATE</a></button>
     </div>
-    <div class="w-header">
-        <nav class="navbar this navbar-expand-lg navbar-light bg-light">
-            <div class="nn">
-            <a class="navbar-brand" href="#">Navbar</a>
-        </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
+  </div>
+  <div class="header-sec-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler ml-auto mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        Menu &nbsp;<span class="navbar-toggler-icon custom-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto header-navbar-ul">
+          <li class="nav-item active header-navbar-li">
+            <a class="nav-link text-light" href="{{route('index')}}">Home</a>
+          </li>
+          <li class="nav-item active header-navbar-li">
+            <a class="nav-link text-light" href="#">About Us </a>
+          </li>
+          <li class="nav-item active header-navbar-li">
+            <a class="nav-link text-light" href="#">Our Values </a>
+          </li>
+          <li class="nav-item dropdown header-navbar-li">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Team
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </nav>
-    </div>
+          </li>
+          <li class="nav-item active header-navbar-li">
+            <a class="nav-link text-light" href="#">Events </a>
+          </li>
+          <li class="nav-item active header-navbar-li">
+            <a class="nav-link text-light" href="#">Membership Application</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
 </header>
-<!-- header-end -->
