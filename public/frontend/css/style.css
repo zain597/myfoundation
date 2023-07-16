@@ -2209,7 +2209,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('https://cdn.discordapp.com/attachments/1116327198274621552/1128308435696504924/Untitled-removebg-preview.png');
+  background: url('https://o.remove.bg/downloads/9856e803-5e6f-461f-a5d7-b385f05be155/23232323245235654wy76rtsf-removebg-preview.png');
   background-size: 1000px 100px;
 }
 footer .wave#wave1{
@@ -2260,6 +2260,7 @@ footer .wave#wave4{
 .footer .footer_top {
   padding-top: 130px;
   padding-bottom: 110px;
+  background: linear-gradient(to bottom, #C09400 , #fff);
 }
 
 @media (max-width: 767px) {
