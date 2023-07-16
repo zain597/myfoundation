@@ -157,10 +157,10 @@
                             </div>
                         </div>
                     @endforeach
-                    <h5 style="color: #C09400;text-align:left;cursor:pointer">View Calendar</h5>
+                    <h5 style="color: #C09400;text-align:left;cursor:pointer"><a href="{{route('event.all')}}">View Calendar</a></h5>
 
             </div>
-            <div class="lg col-md-5 pt-2 pb-2 text-center">
+            <div class="lg col-md-5 col-sm-12 pt-2 pb-2 text-center">
                 <h3 style="padding: 10px 2px;font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">ISLAMIC CALENDAR</h3 >
                     <div id="calendar">
 
@@ -623,7 +623,7 @@
                 selectable: true,
                 selectHelper: true,
                 defaultView: 'month',
-                aspectRatio: 1.35,
+                // aspectRatio: 1.35,
                 scrollTime: '08:00:00', // Adjust this value to set the initial scroll position
                 scrollable: true,
                 select: function(start, end, allDays){
@@ -723,11 +723,11 @@
             // $('.fc').css('background-color','#f5f5f5');
 
             var apiEndpoint = 'https://api.aladhan.com/v1/timingsByCity';
-            // var cityName = 'Lahore';
-            // var countryName = 'Pakistan';
+            var cityName = 'Lahore';
+            var countryName = 'Pakistan';
 
-            var cityName = 'London';
-            var countryName = 'United Kingdom';
+            // var cityName = 'London';
+            // var countryName = 'United Kingdom';
 
             $.ajax({
                 url: apiEndpoint,

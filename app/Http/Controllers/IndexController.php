@@ -87,4 +87,14 @@ class IndexController extends Controller
         $booking->delete();
         return $id;
     }
+    public function allEvent()
+    {
+        $events = Booking::orderBy("start_date", "asc")->paginate(10);
+        return view('frontend.event-all',compact('events'));
+    }
+    public function detailEvent($id)
+    {
+        $event = Booking::findOrFail($id);
+        return view('frontend.event-detail',compact('event'));
+    }
 }

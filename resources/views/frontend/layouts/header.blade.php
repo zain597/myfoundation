@@ -36,7 +36,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-3 col-lg-3">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{route('index')}}">
                                 <img src="{{asset('frontend/img/logo.png')}}" alt="">
                             </a>
                         </div>
@@ -45,8 +45,9 @@
                         <div class="main-menu">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="{{route('index')}}">About</a></li>
+                                    <li><a href="{{route('index')}}">home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="{{route('event.all')}}">Events</a></li>
                                     <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">blog</a></li>

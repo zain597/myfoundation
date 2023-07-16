@@ -6877,3 +6877,47 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+.events-all, .event-detail{
+  margin-top: 7rem !important;
+  margin-bottom: 7rem !important;
+  margin: 0 80px;
+  width: 100%;
+  height: auto;
+  
+}
+.events-all .all{
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.events-all .all .date{
+  margin-right: 80px;
+}
+.events-all .all .date h3, .events-all .all .event h3{
+  font-size: small;
+}
+.events-all .all .date h1, .events-all .all .event h1{
+  font-size: xx-large;
+}
+.events-all .all .event h4 .locationAddress{
+  color: gray;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+@media (max-width: 1000px) {
+  .events-all{
+    margin: 0;
+    
+  }
+  .events-all .all .date h1, .events-all .all .event h1{
+    font-size: 20px;
+  }
+  .events-all .all .event p{
+    display: none;
+  }
+}
+.event-detail .event-detail-about{
+  display: flex;
+  margin-top: 15px;
+}

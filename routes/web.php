@@ -14,11 +14,10 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-})->name('index');
 
 Route::get('/',[IndexController::class,'index'])->name('index');
+Route::get('/event/all',[IndexController::class,'allEvent'])->name('event.all');
+Route::get('/event/detail/{id}',[IndexController::class,'detailEvent'])->name('event.detail');
 Route::post('/calendar/event/store',[IndexController::class,'storeEvent'])->name('calendar.event.store');
 Route::patch('/calendar/event/update/{id}',[IndexController::class,'updateEvent'])->name('calendar.event.update');
 Route::delete('/calendar/event/delete/{id}',[IndexController::class,'deleteEvent'])->name('calendar.event.delete');
