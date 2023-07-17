@@ -35,7 +35,12 @@ class IndexController extends Controller
     public function storeEvent(Request $request)
     {
         $request->validate([
-            'title' => 'required|string'
+            'title' => 'required|string',
+            'desc' => 'required',
+            'location' => 'required',
+            'embededlocation' => 'required',
+            'start_range' => 'required',
+            'end_range' => 'required'
         ]);
 
         $booking = Booking::create([
@@ -45,6 +50,8 @@ class IndexController extends Controller
             'start_range' => $request->start_range,
             'end_range' => $request->end_range,
             'desc' => $request->desc,
+            'location' => $request->location,
+            'embededlocation' => $request->embededlocation,
         ]);
 
         $color = '#ffebcd';

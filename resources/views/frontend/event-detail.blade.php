@@ -10,43 +10,51 @@
 @section('content')
     <div class="event-detail">
         <div class="container-fluid">
+            @inject('carbon', 'Carbon\Carbon')
             <div class="event">
-                <h1>Muharram Majlis</h1>
-                <h4>July 18 @ 7:45 pm - 10:00 pm</h4>
+                <h1>{{$event->title}}</h1>
+                <h4>{{ $carbon::parse($event->start_date)->format('F d, Y') }} @ {{ $carbon::parse($event->start_range)->format('g:i A') }} - {{ $carbon::parse($event->end_range)->format('g:i A') }}</h4>
                 <p style="width: 80%">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate labore officia optio. Aperiam veniam quod non exercitationem soluta suscipit explicabo harum accusamus hic cupiditate maxime pariatur cumque, molestias asperiores dolore! Tenetur ut voluptatum ea, dignissimos et perspiciatis enim in molestiae sit ex odit maxime laborum ullam quidem impedit, neque ab.
+                    {{$event->desc}}
                 </p>
                 <div class="event-detail-about">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-12 divs">
                         <h3>DETAILS</h3>
                         <h4>Date:</h4>
-                        <h5>July 18</h5>
+                        <h5>{{ $carbon::parse($event->start_date)->format('M') }} {{ $carbon::parse($event->start_date)->format('d') }}</h5>
                         
                         <h4>Time:</h4>
-                        <h5>7:45 pm - 10:00 pm</h5>
+                        <h5>{{ $carbon::parse($event->start_range)->format('g:i A') }} - {{ $carbon::parse($event->end_range)->format('g:i A') }}</h5>
                     </div>
-                    <div class="col-md-3">
-                        <h3>ORGANISER</h3>
-                        <h3>Hyderi Islamic Centre</h3>
+                    <div class="col-md-3 col-sm-12 divs">
+                        <h3>ORGANISER:</h3>
+                        <h3>Mohebban Al-Mahdi Youth Foundation</h3>
                         <h4>Phone:</h4>
-                        <h5>02087697553</h5>
+                        <h5>090078601</h5>
                         <h4>Email:</h4>
-                        <h5>secretariat@hyderi.org.uk</h5>
+                        <h5>chair@myfoundation.org.uk</h5>
                     </div>
-                    <div class="col-md-3">
-                        <h3>VENUE</h3>
-                        <h3>Hyderi Islamic Centre</h3>
+                    <div class="col-md-3 col-sm-12 divs">
+                        <h3>VENUE:</h3>
+                        <h3>Mohebban Al-Mahdi Youth Foundation</h3>
                         <p>
-                            6 Pioneer Place
-                            Croydon, CR0 9AW United Kingdom
+                            {{$event->location}}
                         </p>
                         <h4>Email:</h4>
-                        <h5>secretariat@hyderi.org.uk</h5>
+                        <h5>chair@myfoundation.org.uk</h5>
 
                     </div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-3 col-sm-12 divs" id="map-container"  >
+                        <div class="map" id="my-iframe">
+                            {!! $event->embededlocation !!}
+                        </div>
+                    </div>
+                
+                    
                 </div>
             </div>
+            
+            
         </div>
     </div>
 @endsection

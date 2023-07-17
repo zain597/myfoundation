@@ -3,7 +3,7 @@
   <div class="header-sec-1">
     <a href="{{route('index')}}"><img src="{{asset('frontend/img/footer_logo.png')}}" class="header-img" alt=""></a>
     <div class="btns" >
-      <button class="btn btn-lg"><a href="https://www.youtube.com/@MohebbanAlMahdi" target="_blank" class="header-live "> <i class="fa fa-youtube mr-1"></i>Live</a></button>
+      <button class="btn btn-lg"><a href="https://www.youtube.com/@MohebbanAlMahdi" target="_blank" class="header-live "><i class="fa-brands fa-youtube mr-1"></i>Live</a></button>
       <button class="btn btn-lg"><a href="" class="header-donate "> <i class="fa fa-heart mr-1"></i>DONATE</a></button>
     </div>
   </div>

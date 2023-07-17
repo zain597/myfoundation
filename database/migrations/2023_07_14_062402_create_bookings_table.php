@@ -22,6 +22,7 @@ class CreateBookingsTable extends Migration
             $table->time('start_range')->nullable();
             $table->time('end_range')->nullable();
             $table->string('location')->nullable();
+            $table->longText('embededlocation')->nullable();
             $table->timestamps();
         });
     }

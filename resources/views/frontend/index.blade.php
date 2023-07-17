@@ -48,7 +48,7 @@
             backdrop-filter: blur(3px) !important;
         }
         .custom-modal{
-            background-color: #ff8243 !important;
+            background-color: #ffc8ab !important;
         }
         .upcoming_event{
             display: flex;
@@ -130,23 +130,29 @@
         </div>
         <div class="modal-body">
             <label for="title" class="text-dark">Title:</label>
-            <input type="text" class="form-control" id="title" >
-            <label for="desc" class="text-dark">Description:</label>
-            <input type="textarea" class="form-control" id="desc" >
             <span id="titleError" class="text-danger"></span>
+            <input type="text" class="form-control" id="title">
+            <label for="desc" class="text-dark">Description:</label>
+            <span id="descError" class="text-danger"></span>
+            <input type="textarea" class="form-control" id="desc">
+            <label for="start_range" class="text-dark" >Location Name:</label><br>
+            <span id="locationError" class="text-danger"></span>
+            <input type="text" class="form-control" id="location" placeholder="Enter location name">
+            <label for="start_range" class="text-dark" >Embeded Location:</label><br>
+            <span id="emblocError" class="text-danger"></span>
+            <input type="text" class="form-control" id="embededlocation" placeholder="Enter embeded locattion from google map">
             <div class="mt-2">
+                <span id="timeError" class="text-danger"></span>
                 <label for="start_range" class="text-dark" >Start Time:</label>
                 <input type="time" id="start_range" name="start_range">
                 <label for="end_range" class="text-dark">End Time:</label>
                 <input type="time" id="end_range" name="end_range">
             </div>
-            <input type="text" id="location-input" name="location" placeholder="Enter location">
-            <div id="map"></div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="saveBtn" class="btn btn-warning">Save changes</button>
+          <button type="button" id="saveBtn" class="btn btn-warning">Submit</button>
         </div>
       </div>
     </div>
@@ -689,13 +695,15 @@
                         var start_range = $('#start_range').val();
                         var end_range = $('#end_range').val();
                         var desc = $('#desc').val();
+                        var location = $('#location').val();
+                        var embededlocation = $('#embededlocation').val();
 
 
                         $.ajax({
                             url: "{{route('calendar.event.store')}}",
                             type: "POST",
                             dataType: 'json',
-                            data: { title, start_date, end_date, start_range, end_range, desc},
+                            data: { title, start_date, end_date, start_range, end_range, desc, location, embededlocation},
                             success:function(response)
                             {
                                 $('#bookingModal').modal('hide')
@@ -711,6 +719,10 @@
                             {
                                 if(error.responseJSON.errors) {
                                     $('#titleError').html(error.responseJSON.errors.title);
+                                    $('#descError').html(error.responseJSON.errors.descError);
+                                    $('#locationError').html(error.responseJSON.errors.title);
+                                    $('#emblocError').html(error.responseJSON.errors.title);
+                                    $('#timeError').html(error.responseJSON.errors.title);
                                 }
                             },
                         });

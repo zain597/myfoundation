@@ -6906,6 +6906,9 @@ h6 {
   font-family: sans-serif;
   font-size: medium;
 }
+/* .event-detail .event-detail-about .event-detail-1, .event-detail .event-detail-about .event-detail-2{
+  display: flex;
+} */
 
 @media (max-width: 1000px) {
   .events-all{
@@ -6931,11 +6934,25 @@ h6 {
     font-size: 15px;
     padding: 12px 10px;
     border-radius: 15px;
+  }.event-detail{
+    margin-left: 0px;
+  }
+  .event-detail .event-detail-about {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100% !important;
+    margin-top: 15px;
+  }
+  .event-detail-about #map-container .map{
+    height: 150px; 
+    max-width: 300px !important;
+    margin-left: 10px; 
   }
 }
 
 .event-detail .event-detail-about{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 .event-detail-about h5{
@@ -6952,6 +6969,10 @@ h6 {
   color: black;
   font-size: larger;
   font-weight: 600;
+}
+.event-detail-about #map-container .map{
+  height: 150px !important; 
+  max-width: 150px !important; 
 }
 .header-top .header-sec-1{
   display: flex;
@@ -6994,4 +7015,5 @@ h6 {
   header .header-sec-2 .navbar .collapse .header-navbar-ul .header-navbar-li{
     margin: 0 10px;
   }
+  
 }
