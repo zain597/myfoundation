@@ -47,7 +47,7 @@
             backdrop-filter: blur(3px) !important;
         }
         .custom-modal{
-            background-color: #ccb56b !important;
+            background-color: #ff8243 !important;
         }
         .upcoming_event{
             display: flex;
@@ -146,7 +146,7 @@
         </div>
         <div class="cal d-flex flex-wrap">
             <div class="sm col-md-3 d-flex flex-column pt-2 pb-2 text-center ">
-                <h3 style="padding: 10px 2px;font-size: xx-large; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">UPCOMING EVENTS</h3 >
+                <h3 style="padding: 10px 2px;font-size: xx-large; color: #ff8243; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">UPCOMING EVENTS</h3 >
                     @foreach ($timings as $time)
                         @inject('carbon', 'Carbon\Carbon')
                         <div class="upcoming_event">
@@ -160,18 +160,18 @@
                             </div>
                         </div>
                     @endforeach
-                    <h5 style="color: #C09400;text-align:left;cursor:pointer"><a href="{{route('event.all')}}">View Calendar</a></h5>
+                    <h5 style="color: #ff8243 ;text-align:left;cursor:pointer"><a href="{{route('event.all')}}">View Calendar</a></h5>
 
             </div>
             <div class="lg col-md-5 col-sm-12 pt-2 pb-2 text-center">
-                <h3 style="padding: 10px 2px;font-size: xx-large   ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">ISLAMIC CALENDAR</h3 >
+                <h3 style="padding: 10px 2px;font-size: xx-large   ; color: #ff8243 ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">ISLAMIC CALENDAR</h3 >
                     <div id="calendar">
 
 
                     </div>
             </div>
             <div class="sm col-md-3 pt-2 pb-2 text-center">
-               <h3 style="padding: 10px 2px;font-size: xx-large    ; color: #C09400; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">SALAAT TIMINGS</h3 > 
+               <h3 style="padding: 10px 2px;font-size: xx-large    ; color: #ff8243 ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-top: 1px solid black;border-bottom: 1px solid black;">SALAAT TIMINGS</h3 > 
                 <div>
                     <h3 id="todayDay"></h3>
                     <table width="100%" class="table table-bordered table-lg">
