@@ -3,6 +3,7 @@
     Myfoundation
 @endsection
 @push('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
 
     <style>
@@ -73,6 +74,41 @@
             {
                 font-size: 60%
             }
+        }
+        .w-cards{
+            width: 96%;
+            margin: auto 2%;
+            display: flex !important;
+            /* align-items:     ; */
+            justify-content: space-around !important;
+            flex-direction:  row;
+            flex-wrap: wrap;
+            padding: 2%
+        }
+        .card{
+            margin: 20px;
+            width: 320px;
+            height: 270px;
+            height: 10 !important;
+            border: 1px solid rgb(231, 231, 231);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            text-align: center;
+        }
+        .card i {
+            font-size: 50px
+        }
+        .card{
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px !important;
+            transition: all 1s;
+        }
+        .card:hover{
+            transition: all 1s;
+            transform: scale(1.07);
         }
     </style>
 @endpush
@@ -202,7 +238,21 @@
             </div>
         </div>
     </section>
-    
+    <h2 style="text-align: center; border-top: 1px solid black; border-bottom:1px solid black; width: 90%; margin-left: 5%; height: 60px; display: flex; align-items: center; justify-content: center">SERVICES</h2>
+    <div class="w-cards">
+        <div class="card"><i class="fa-solid fa-mosque"></i>Jumuah (Friday) Prayers
+        </div>
+        <div class="card"><i class="fa-solid fa-calendar-days"></i> Regular Islamic Programming
+        </div>
+        <div class="card"><i class="fa-solid fa-book"></i>Islamic Madressah (School)
+        </div>
+        <div class="card"> <i class="fa-solid fa-graduation-cap"></i> Youth Programs
+            </div>
+        <div class="card"> <i class="fa-solid fa-scale-balanced"></i> Funeral Services
+        </div>
+        <div class="card"><i class="fa-solid fa-person-running"></i> Sports & Recreation
+        </div>
+    </div>
     <div class="latest_activites_area">
         <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
             <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">

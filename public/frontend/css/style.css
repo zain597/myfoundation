@@ -2209,7 +2209,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('https://o.remove.bg/downloads/9856e803-5e6f-461f-a5d7-b385f05be155/23232323245235654wy76rtsf-removebg-preview.png');
+  background: url('https://cdn.discordapp.com/attachments/1116327198274621552/1130448672715440139/Untitled.png');
   background-size: 1000px 100px;
 }
 footer .wave#wave1{
@@ -2260,7 +2260,7 @@ footer .wave#wave4{
 .footer .footer_top {
   padding-top: 130px;
   padding-bottom: 110px;
-  background: linear-gradient(to bottom, #ff8243 , #fff);
+  background: linear-gradient(to bottom, #FF7F27 , #fff);
 }
 
 @media (max-width: 767px) {
@@ -6938,7 +6938,21 @@ h6 {
   display: flex;
   margin-top: 15px;
 }
-
+.event-detail-about h5{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: grey;
+  /* font-weight: lighter; */
+}
+.event-detail-about h4{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  font-weight: 600;
+}.event-detail-about h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  font-size: larger;
+  font-weight: 600;
+}
 .header-top .header-sec-1{
   display: flex;
   justify-content: space-around;
