@@ -57,7 +57,6 @@
                             <li><a href="#">Fundraise</a></li>
                             <li><a href="#">Volunteer</a></li>
                             <li><a href="#">Partner</a></li>
-                            <li><a href="#">Jobs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,10 +66,11 @@
                             Contacts
                         </h3>
                         <div class="contacts">
-                            <p>+2(305) 587-3407 <br>
-                                info@loveuscharity.com <br>
-                                Flat 20, Reynolds Neck, North
-                                Helenaville, FV77 8WS
+                            <p>+2(900) 786-0132 <br>
+                                chair@myfoundation.org.uk <br>
+                                Picadilly Business Centre
+                                Aldow Enterprise Park
+                                ​Manchester, M12 6AE, UK.
                             </p>
                         </div>
                     </div>
@@ -84,27 +84,25 @@
                             <li>
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="img/news/news_1.png" alt="">
+                                        <img src="{{asset('frontend/img/shia.jpg')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="info">
                                     <a href="#">
-                                        <h4>School for African 
-                                            Childrens</h4>
+                                        <h4>Muharram 1445 AH (Hijri year).</h4>
                                     </a>
-                                    <span>Jun 12, 2019</span>
+                                    <span>Jun 12, 2023</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="img/news/news_2.png" alt="">
+                                        <img src="{{asset('frontend/img/shia2.png')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="info">
                                     <a href="#">
-                                        <h4>School for African 
-                                            Childrens</h4>
+                                        <h4>Follow our daily news</h4>
                                     </a>
                                     <span>Jun 12, 2019</span>
                                 </div>
@@ -122,7 +120,7 @@
                 <div class="col-xl-12">
                     <p class="copy_right text-center">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="ti-heart" aria-hidden="true"></i> by Myfoundation
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </p>
                 </div>

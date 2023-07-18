@@ -183,7 +183,7 @@
         <div class="mrq">
             <div class="news">News</div>
             <marquee direction="left">
-                A Guide on adding Hyderi Events to your Calendar &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  Imam Reza (AS) Hardship Fund
+                A Guide on adding Myfoundation Events to your Calendar &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  Imam Reza (AS) Hardship Fund
             </marquee>
         </div>
         <div class="cal d-flex flex-wrap">
@@ -697,7 +697,7 @@
                         var desc = $('#desc').val();
                         var location = $('#location').val();
                         var embededlocation = $('#embededlocation').val();
-
+                        
 
                         $.ajax({
                             url: "{{route('calendar.event.store')}}",
@@ -818,7 +818,8 @@
                     $('#dhuhr').text(dhuhrTime); 
                     $('#asr').text(asrTime); 
                     $('#maghrib').text(maghribTime); 
-                    $('#isha').text(ishaTime); 
+                    $('#isha').text(ishaTime);
+                    
                 },
                 error: function(xhr, status, error) {
                     console.log(error);
@@ -839,7 +840,7 @@
             var todayDay = daysOfWeek[dayOfWeek]+' '+currentMonthName+' '+currentDay;
             $('#todayDay').text(todayDay); 
 
-           
+
         });
             
             

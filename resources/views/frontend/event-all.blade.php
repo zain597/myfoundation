@@ -16,11 +16,11 @@
                 <div class="all">
                     <div class="date">
                         <h3>{{ $carbon::parse($event->start_date)->format('M') }}</h3>
-                        <h1><a href="{{ route('event.detail', ['id' => $event->id]) }}">{{ $carbon::parse($event->start_date)->format('d') }}</a></h1>
+                        <h1><a href="{{ route('event.detail', ['id' => encrypt($event->id)]) }}">{{ $carbon::parse($event->start_date)->format('d') }}</a></h1>
                     </div>
                     <div class="event">
                         <h3>{{ $carbon::parse($event->start_date)->format('F d, Y') }}&nbsp; @ &nbsp;{{ $carbon::parse($event->start_range)->format('g:i A') }} - {{ $carbon::parse($event->end_range)->format('g:i A') }}</h3>
-                        <h1><a href="{{ route('event.detail', ['id' => $event->id]) }}">{{$event->title}}</a></h1>
+                        <h1><a href="{{ route('event.detail', ['id' => encrypt($event->id)]) }}">{{$event->title}}</a></h1>
                         <h4 class="location">Mohebban Al-Mahdi Youth Foundation <span class="locationAddress">6 Pioneer Place, Croydon</span></h4>
                         <p style="width: 80%">{{$event->desc}} </p>
                     </div>

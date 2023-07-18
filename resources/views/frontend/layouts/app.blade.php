@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href={{asset('frontend/img/favicon.png')}}>
+    <link rel="shortcut icon" type="image/x-icon" href={{asset('frontend/img/logo.png')}}>
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -39,6 +39,7 @@
 
     <!-- link that opens popup -->
     <!-- JS here -->
+
     <script src={{asset('frontend/js/vendor/jquery-1.12.4.min.js')}}></script>
     <script src={{asset('frontend/js/vendor/modernizr-3.5.0.min.js')}}></script>
     <script src={{asset('frontend/js/popper.min.js')}}></script>
@@ -65,6 +66,16 @@
     <script src={{asset('frontend/js/mail-script.js')}}></script>
 
     <script src={{asset('frontend/js/main.js')}}></script>
+    @if (Route::is('event.detail'))
+        <script>
+            var iframeElement = document.querySelector('#my-iframe iframe');
+            iframeElement.id = 'myIframeId';
+
+
+            var iframe = document.getElementById('myIframeId');
+            iframe.width = '200'
+        </script>
+    @endif
     @stack('js')
 
 

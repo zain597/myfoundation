@@ -101,6 +101,7 @@ class IndexController extends Controller
     }
     public function detailEvent($id)
     {
+        $id = decrypt($id);
         $event = Booking::findOrFail($id);
         return view('frontend.event-detail',compact('event'));
     }
